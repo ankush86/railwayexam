@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<h1>Beverage Store</h1>
+<p>
+  <strong>Title:</strong>
+  <%= @beverage_store.title %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @beverage_store.info %>
+</p>
+
+<p>
+  <strong>Station:</strong>
+  <%= @beverage_store.station.title %>
+</p>
+
+<%= link_to 'Edit', edit_beverage_store_path(@beverage_store) %> |
+<%= link_to 'Back', beverage_stores_path %>

@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Station</h1>
 <p>
   <strong>Title:</strong>
   <%= @station.title %>
@@ -35,6 +35,24 @@
         <td><%= time_table.arrival_time %></td>
         <td><%= time_table.departure_time %></td>
         <td><%= time_table.train.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1>Beverage Stores</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @station.beverage_stores.each do |beverage_store| %>
+      <tr>
+        <td><%= beverage_store.title %></td>
+        <td><%= beverage_store.info %></td>
       </tr>
     <% end %>
   </tbody>

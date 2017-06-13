@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :beverage_stores
   devise_for :users, controllers: { registrations: "registrations"}
   resources :time_tables
   resources :staffs

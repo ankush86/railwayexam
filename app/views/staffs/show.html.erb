@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Staff</h1>
 <p>
   <strong>Title:</strong>
   <%= @staff.title %>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Station:</strong>
-  <%= @staff.station %>
+  <%= @staff.station.title %>
 </p>
 
 <%= link_to 'Edit', edit_staff_path(@staff) %> |
