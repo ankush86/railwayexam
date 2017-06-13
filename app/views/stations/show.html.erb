@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @station.title %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @station.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @station.address %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @station.info %>
+</p>
+
+<h1>Trains</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Arrival time</th>
+      <th>Departure time</th>
+      <th>Train</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @station.time_tables.each do |time_table| %>
+      <tr>
+        <td><%= time_table.arrival_time %></td>
+        <td><%= time_table.departure_time %></td>
+        <td><%= time_table.train.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'Edit', edit_station_path(@station) %> |
+<%= link_to 'Back', stations_path %>

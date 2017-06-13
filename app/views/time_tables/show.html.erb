@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Arrival time:</strong>
+  <%= @time_table.arrival_time %>
+</p>
+
+<p>
+  <strong>Departure time:</strong>
+  <%= @time_table.departure_time %>
+</p>
+
+<p>
+  <strong>Station:</strong>
+  <%= @time_table.station.title %>
+</p>
+
+<p>
+  <strong>Train:</strong>
+  <%= @time_table.train.title %>
+</p>
+
+<%= link_to 'Edit', edit_time_table_path(@time_table) %> |
+<%= link_to 'Back', time_tables_path %>
