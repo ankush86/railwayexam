@@ -1,3 +1,6 @@
+<div class="row">
+  <div class="col-md-offset-3 col-md-6">
+
 <%= form_with(model: time_table, local: true) do |form| %>
   <% if time_table.errors.any? %>
     <div id="error_explanation">
@@ -13,25 +16,28 @@
 
   <div class="field">
     <%= form.label :arrival_time %>
-    <%= form.time_select :arrival_time, id: :time_table_arrival_time %>
+    <%= form.time_select :arrival_time, { prompt: {hour: 'Choose hour', minute: 'Choose minute'}, minute_step: 15 }, { class: 'form-control' }%>
   </div>
+
 
   <div class="field">
     <%= form.label :departure_time %>
-    <%= form.time_select :departure_time, id: :time_table_departure_time %>
+    <%= form.time_select :departure_time, { prompt: {hour: 'Choose hour', minute: 'Choose minute'}, minute_step: 15 }, { class: 'form-control' }%>
   </div>
 
   <div class="field">
     <%= form.label :station %>
-    <%= form.select :station_id, Station.all.collect {|p| [ p.title, p.id ] } %>
+    <%= form.select :station_id, Station.all.collect {|p| [ p.title, p.id ] }, {}, class: "form-control"  %>
   </div>
 
   <div class="field">
     <%= form.label :train %>
-    <%= form.select :train_id, Train.all.collect {|p| [ p.title, p.id ] } %>
+    <%= form.select :train_id, Train.all.collect {|p| [ p.title, p.id ] }, {}, class: "form-control"  %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Save" , {class: "btn btn-primary"}%>
   </div>
 <% end %>
+  <div>
+</div>

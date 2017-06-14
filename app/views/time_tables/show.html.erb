@@ -1,3 +1,6 @@
+<div class="row">
+  <div class="col-md-offset-3 col-md-6">
+
 <p id="notice"><%= notice %></p>
 <h1>Time Table</h1>
 <p>
@@ -19,6 +22,9 @@
   <strong>Train:</strong>
   <%= @time_table.train.title %>
 </p>
-
-<%= link_to 'Edit', edit_time_table_path(@time_table) %> |
-<%= link_to 'Back', time_tables_path %>
+<center>
+  <%= link_to 'Edit', edit_time_table_path(@time_table) %> |
+  <%= link_to 'Back', time_tables_path %>
+</center>
+  <div>
+</div>

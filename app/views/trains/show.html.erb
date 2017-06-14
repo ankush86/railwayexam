@@ -1,3 +1,6 @@
+<div class="row">
+  <div class="col-md-offset-3 col-md-6">
+
 <p id="notice"><%= notice %></p>
 <h1>Train</h1>
 <p>
@@ -9,7 +12,8 @@
   <strong>Info:</strong>
   <%= @train.info %>
 </p>
-
+  <div>
+</div>
 <h1>Stations</h1>
 <table class="table table-striped">
   <thead>
@@ -29,6 +33,7 @@
     <% end %>
   </tbody>
 </table>
-
+<center>
 <%= link_to 'Edit', edit_train_path(@train) %> |
 <%= link_to 'Back', trains_path %>
+</center>
