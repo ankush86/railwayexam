@@ -21,8 +21,10 @@
         <td><%= station.address %></td>
         <td><%= station.info %></td>
         <td><%= link_to 'Show', station %></td>
-        <td><%= link_to 'Edit', edit_station_path(station) %></td>
-        <td><%= link_to 'Destroy', station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+          <td><%= link_to 'Edit', edit_station_path(station) %></td>
+          <td><%= link_to 'Destroy', station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Station', new_station_path %>
+<%= link_to 'New Station', new_station_path if user_signed_in? %>

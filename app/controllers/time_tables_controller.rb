@@ -1,6 +1,6 @@
 class TimeTablesController < ApplicationController
   before_action :set_time_table, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, :except => [:index]
+  before_action :authenticate_user!
 
   # GET /time_tables
   # GET /time_tables.json

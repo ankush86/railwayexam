@@ -4,12 +4,12 @@
       <a class="navbar-brand" href="<%= root_path %>">Railwayexam</a>
     </div>
     <ul class="nav navbar-nav">
-      <%=active_link(time_tables_path,"Time Table")%>
+      <%=active_link(stations_path,"Stations")%>
       <% if user_signed_in? %> 
+        <%=active_link(time_tables_path,"Time Table")%>        
         <%=active_link(staffs_path,"Staff")%>
-        <%=active_link(trains_path,"Train")%>
-        <%=active_link(stations_path,"Station")%>
-        <%=active_link(beverage_stores_path,"Beverage Store")%>
+        <%=active_link(trains_path,"Trains")%>
+        <%=active_link(beverage_stores_path,"Beverage Stores")%>
         <%=active_link(destroy_user_session_path,"Logout",{method: :delete})%>  
       <% else %>
         <%=active_link(new_user_session_path,"Login")%>  
