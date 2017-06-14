@@ -12,13 +12,16 @@ RSpec.describe "time_tables/index", type: :view do
       :phone => "12345678",
       :address => "Address" 
     ))
-
     assign(:time_tables, [
       TimeTable.create!(
+        :arrival_time => Faker::Time.forward(1, :midnight), 
+        :departure_time => Faker::Time.forward(1, :midnight),
         :station_id => @station.id,
         :train_id => @train.id
       ),
       TimeTable.create!(
+        :arrival_time => Faker::Time.forward(1, :midnight), 
+        :departure_time => Faker::Time.forward(1, :midnight),
         :station_id => @station.id,
         :train_id => @train.id
       )

@@ -13,6 +13,7 @@ RSpec.describe "beverage_stores/edit", type: :view do
     @beverage_store = assign(:beverage_store, BeverageStore.create!(
       :title => "MyString",
       :info => "MyString",
+      :price => 10,
       :station_id => @station.id
     ))
   end
@@ -25,6 +26,8 @@ RSpec.describe "beverage_stores/edit", type: :view do
       assert_select "input[name=?]", "beverage_store[title]"
 
       assert_select "textarea[name=?]", "beverage_store[info]"
+
+      assert_select "input[name=?]", "beverage_store[price]"
 
       assert_select "select[name=?]", "beverage_store[station_id]"
     end

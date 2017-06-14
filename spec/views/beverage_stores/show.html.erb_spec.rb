@@ -13,6 +13,7 @@ RSpec.describe "beverage_stores/show", type: :view do
     @beverage_store = assign(:beverage_store, BeverageStore.create!(
       :title => "Title",
       :info => "Info",
+      :price => 10,
       :station_id => @station.id
     ))
   end
@@ -21,6 +22,7 @@ RSpec.describe "beverage_stores/show", type: :view do
     render
     expect(rendered).to match(/Title/)
     expect(rendered).to match(/Info/)
+    expect(rendered).to match(/10/)
     expect(rendered).to match(/Station/)
   end
 end

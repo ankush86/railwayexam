@@ -14,11 +14,13 @@ RSpec.describe "beverage_stores/index", type: :view do
       BeverageStore.create!(
         :title => "Title",
         :info => "Info",
+        :price => 10,
         :station_id => @station.id
       ),
       BeverageStore.create!(
         :title => "Title",
         :info => "Info",
+        :price => 10,
         :station_id => @station.id
       )
     ])
@@ -28,6 +30,7 @@ RSpec.describe "beverage_stores/index", type: :view do
     render
     assert_select "tr>td", :text => "Title".to_s, :count => 2
     assert_select "tr>td", :text => "Info".to_s, :count => 2
+    assert_select "tr>td", :text => 10.to_f.to_s, :count => 2
     assert_select "tr>td", :text => "Station".to_s, :count => 2
   end
 end

@@ -17,6 +17,7 @@ RSpec.describe "beverage_stores/new", type: :view do
       assert_select "input[name=?]", "beverage_store[title]"
 
       assert_select "textarea[name=?]", "beverage_store[info]"
+      assert_select "input[name=?]", "beverage_store[price]"
 
       assert_select "select[name=?]", "beverage_store[station_id]"
     end
