@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe "time_tables/new", type: :view do
   before(:each) do
     assign(:time_table, TimeTable.new(
+      :arrival_time => nil, 
+      :departure_time => nil,      
       :station => nil,
       :train => nil
     ))

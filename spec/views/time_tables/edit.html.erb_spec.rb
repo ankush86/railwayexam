@@ -15,6 +15,8 @@ RSpec.describe "time_tables/edit", type: :view do
 
 
     @time_table = assign(:time_table, TimeTable.create!(
+      :arrival_time => Faker::Time.forward(1, :midnight), 
+      :departure_time => Faker::Time.forward(1, :midnight),      
       :station_id => @station.id,
       :train_id => @train.id
     ))
