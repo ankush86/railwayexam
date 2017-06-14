@@ -25,6 +25,11 @@
       </div>
 
       <div class="field">
+        <%= form.label :price %>
+        <%= form.text_field :price, id: :beverage_store_price, class: "form-control" %>
+      </div>
+
+      <div class="field">
         <%= form.label :station %>
         <%= form.select :station_id, Station.all.collect {|p| [ p.title, p.id ] }, {},class: "form-control" %>
       </div>

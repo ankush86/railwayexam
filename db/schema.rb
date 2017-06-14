@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170613185944) do
   create_table "beverage_stores", force: :cascade do |t|
     t.string "title"
     t.text "info"
+    t.float "price"
     t.bigint "station_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

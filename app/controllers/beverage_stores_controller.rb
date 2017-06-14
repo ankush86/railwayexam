@@ -69,6 +69,6 @@ class BeverageStoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def beverage_store_params
-      params.require(:beverage_store).permit(:title, :info, :station_id)
+      params.require(:beverage_store).permit(:title, :info, :price,:station_id)
     end
 end
