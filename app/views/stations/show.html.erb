@@ -3,25 +3,32 @@
 
 <p id="notice"><%= notice %></p>
 <h1>Station</h1>
-<p>
-  <strong>Title:</strong>
-  <%= @station.title %>
-</p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @station.phone %>
-</p>
+    <table class="table">
+      <tbody>
+          <tr>
+            <td><strong>Title</strong></td>
+            <td>:</td>
+            <td><%= @station.title %></td>
+          </tr>
+          <tr>
+            <td><strong>Phone</strong></td>
+            <td>:</td>
+            <td><%= @station.phone %></td>
+          </tr>
+          <tr>
+            <td><strong>Address</strong></td>
+            <td>:</td>
+            <td><%= @station.address %></td>
+          </tr>
+          <tr>
+            <td><strong>Info</strong></td>
+            <td>:</td>
+            <td><%= @station.info %></td>
+          </tr>
+      </tbody>
+    </table>
 
-<p>
-  <strong>Address:</strong>
-  <%= @station.address %>
-</p>
-
-<p>
-  <strong>Info:</strong>
-  <%= @station.info %>
-</p>
   <div>
 </div>
 <h1>Trains</h1>

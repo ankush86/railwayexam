@@ -1,19 +1,26 @@
 <div class="row">
   <div class="col-md-offset-3 col-md-6">
 
-<p id="notice"><%= notice %></p>
-<h1>Train</h1>
-<p>
-  <strong>Title:</strong>
-  <%= @train.title %>
-</p>
+    <p id="notice"><%= notice %></p>
+    <h1>Train</h1>
+    <table class="table">
+      <tbody>
+          <tr>
+            <td><strong>Title</strong></td>
+            <td>:</td>
+            <td><%= @train.title %></td>
+          </tr>
+          <tr>
+            <td><strong>Info</strong></td>
+            <td>:</td>
+            <td><%= @train.info %></td>
+          </tr>
+      </tbody>
+    </table>
 
-<p>
-  <strong>Info:</strong>
-  <%= @train.info %>
-</p>
   <div>
 </div>
+
 <h1>Stations</h1>
 <table class="table table-striped">
   <thead>

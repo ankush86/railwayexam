@@ -3,20 +3,25 @@
 
 <p id="notice"><%= notice %></p>
 <h1>Staff</h1>
-<p>
-  <strong>Title:</strong>
-  <%= @staff.title %>
-</p>
-
-<p>
-  <strong>Info:</strong>
-  <%= @staff.info %>
-</p>
-
-<p>
-  <strong>Station:</strong>
-  <%= @staff.station.title %>
-</p>
+    <table class="table">
+      <tbody>
+          <tr>
+            <td><strong>Title</strong></td>
+            <td>:</td>
+            <td><%= @staff.title %></td>
+          </tr>
+          <tr>
+            <td><strong>Info</strong></td>
+            <td>:</td>
+            <td><%= @staff.info %></td>
+          </tr>
+          <tr>
+            <td><strong>Station</strong></td>
+            <td>:</td>
+            <td><%= @staff.station.title %></td>
+          </tr>
+      </tbody>
+    </table>
 <center>
 <%= link_to 'Edit', edit_staff_path(@staff) %> |
 <%= link_to 'Back', staffs_path %>

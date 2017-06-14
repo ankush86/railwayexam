@@ -16,8 +16,8 @@
   <tbody>
     <% @time_tables.each do |time_table| %>
       <tr>
-        <td><%= time_table.arrival_time %></td>
-        <td><%= time_table.departure_time %></td>
+        <td><%= time_table.arrival_time.strftime("%I:%M%p") %></td>
+        <td><%= time_table.departure_time.strftime("%I:%M%p") %></td>
         <td><%= time_table.station.title %></td>
         <td><%= time_table.train.title %></td>
         <td><%= link_to 'Show', time_table %></td>
